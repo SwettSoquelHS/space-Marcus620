@@ -1,25 +1,15 @@
-public class Normal {
+class Normal {
   int x_pos;
   int y_pos;
-  int time = 0;
-  
-    Normal(int x, int y){
-    x_pos = (int)(Math.random() * 700);
-    y_pos = -30; 
+  int size = (int) Math.random() * 2555;
+
+  Normal(int x, int y) {
+    int x_pos = (int)(Math.random() * 700);
+    int y_pos = (int)(Math.random() * 400);
   }
-  
-  void move() {
-    if(y_pos <= 400){
-     y_pos = y_pos + 5; 
-    }
-    if(y_pos >= 400){
-     fill(255); 
-    }
-  }
-  
+
   void show() {
-    fill(30);
-    noLoop();
-    rect(x_pos, y_pos, 5, 5);
+    fill((int) Math.random() * 255, (int) Math.random() * 255, (int) Math.random() * 255);
+      ellipse(mouseX, mouseY, size, size);
   }
 }
