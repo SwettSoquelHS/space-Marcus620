@@ -1,11 +1,11 @@
 class Oddball {
-  int x_pos;
-  int y_pos;
+  float x_pos;
+  float y_pos;
   int Speed = 9;
 
-  Oddball(int x, int y) {
-    x_pos = mouseX;
-    y_pos = 750;
+  Oddball(float x, float y) {
+    x_pos = width/2;
+    y_pos = height/2;
   }
 
   //  void move() {
@@ -18,16 +18,17 @@ class Oddball {
   //  }
 
   void show() {
-    fill(30);
+    fill(60);
     noStroke();
     loop();
-    rect(mouseX, y_pos, 10, 30);
+    rect(x_pos, y_pos, 10, 30);
     if (y_pos >= 300) {
       y_pos = y_pos - 5;
     }
     if (y_pos <= 300) {
       fill(255);
-      y_pos = 900;
+      y_pos = 1100;
+      x_pos = mouseX;
     }
   }
 }
