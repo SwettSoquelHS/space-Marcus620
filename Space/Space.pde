@@ -2,9 +2,7 @@ Jumbo[] star = new Jumbo[300];
 Oddball[] firework = new Oddball[600];
 Normal[] boom = new Normal[150];
 int time;
-int anumber;
-//Declare your variables here
-// so try declaring one Particle first, then instantiate it in setup, and use move and show in draw()
+float x_pos;
 
 void setup() {
   size(700, 700);
@@ -16,7 +14,7 @@ void setup() {
     firework[i] = new Oddball(width/2, height/2);
   }
   for (int i = 0; i < boom.length; i++) {
-    boom[i] = new Normal(width/2, height/2);
+    boom[i] = new Normal();
   }
 }
 
@@ -30,15 +28,9 @@ void draw() {
   for (int i = 0; i < firework.length; i++) {
     firework[i].show();
   }
-//  if (time == 160) {
-//    time = 0;
-//  }
-  if (time >= 150) {
+  if (time >= 60) {
     for (int i = 0; i < boom.length; i++) {
-      boom[1].show();
+      boom[i].show();
     }
   }
-}
-
-void mousePressed() {
 }

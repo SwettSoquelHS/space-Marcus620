@@ -8,15 +8,6 @@ class Oddball {
     y_pos = height/2;
   }
 
-  //  void move() {
-  //    if(y_pos <= 400){
-  //     y_pos = y_pos + 5; 
-  //    }
-  //    if(y_pos >= 400){
-  //     fill(255); 
-  //    }
-  //  }
-
   void show() {
     fill(60);
     noStroke();
@@ -28,6 +19,7 @@ class Oddball {
     if (y_pos <= 300) {
       fill(255);
       y_pos = 1100;
+      time = 0;
       x_pos = mouseX;
     }
   }

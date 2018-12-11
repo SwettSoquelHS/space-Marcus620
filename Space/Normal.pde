@@ -1,29 +1,31 @@
 class Normal {
-  float x_pos;
-  float y_pos;
 
-  Normal(float x, float y) {
-    x_pos = width/2;
-    y_pos = height/2;
+  float x;
+  float y;
+
+  float speedX;
+  float speedY;
+
+
+  Normal() {
+    x = x_pos;
+    y = random (150, 250);
+
+    speedX = random(-10, 10);
+    speedY = random(-10, 10);
   }
 
   void show() {
-    fill(random(0,255), 0, 0);
-    noLoop();
-    ellipse(x_pos, y_pos, 25, 25);
-    loop();
-    int number = (int) random(0,3);
-    if (number == 0) {
-      y_pos = y_pos - 5;
+    x = x + speedX;
+    y = y + speedY;
+    fill(random(0, 255), 0, 0);
+    ellipse (x, y, 10, 10);
+    if (time == 60) {
+      x = mouseX;
+      y = 250;
     }
-    if (number == 1) {
-      y_pos = y_pos + 5;
-    }
-    if (number == 2) {
-      x_pos = x_pos - 5;
-    }
-    if (number == 3) {
-      x_pos = x_pos + 5;
+    if (time == 120) {
+      time = 0;
     }
   }
 }
