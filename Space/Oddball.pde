@@ -17,6 +17,7 @@ class Oddball {
       y_pos = y_pos - 5;
     }
     if (y_pos <= 300) {
+      explosion = x_pos;
       fill(255);
       y_pos = 1100;
       time = 0;

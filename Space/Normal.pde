@@ -8,7 +8,7 @@ class Normal {
 
 
   Normal() {
-    x = x_pos;
+    x = explosion;
     y = random (150, 250);
 
     speedX = random(-10, 10);
@@ -21,7 +21,7 @@ class Normal {
     fill(random(0, 255), 0, 0);
     ellipse (x, y, 10, 10);
     if (time == 60) {
-      x = mouseX;
+      x = explosion;
       y = 250;
     }
     if (time == 120) {

@@ -1,8 +1,10 @@
+
 Jumbo[] star = new Jumbo[300];
 Oddball[] firework = new Oddball[600];
 Normal[] boom = new Normal[150];
 int time;
 float x_pos;
+float explosion = 0;
 
 void setup() {
   size(700, 700);

@@ -13,6 +13,6 @@ class Jumbo {
     noLoop();
     ellipse(x_pos - 300, y_pos, 5, 5);
     loop();
-    x_pos = x_pos + .03;
+    x_pos = x_pos + .05;
   }
 }
